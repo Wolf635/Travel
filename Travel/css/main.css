@@ -4,6 +4,8 @@
 
 @import url("https://fonts.googleapis.com/css?family=Inter:300,regular,500,700&display=swap");
 
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap");
+
 * {
   padding: 0px;
   margin: 0px;
@@ -164,7 +166,19 @@ body {
 
 /* @import "ui.scss"; */
 
-/* @import "image.scss"; */
+.ibg {
+  position: relative;
+}
+
+.ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .header__wrapper {
   display: -webkit-box;
@@ -178,6 +192,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100px;
+  margin-bottom: 90px;
 }
 
 .menu {
@@ -207,7 +222,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 19px;
+  line-height: 118.75%;
   color: #b8becd;
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
@@ -241,7 +256,7 @@ body {
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
-  background-color: #000;
+  background-color: #202336;
 }
 
 .button__login {
@@ -252,9 +267,132 @@ body {
   padding: 0px 36px;
 }
 
+.header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 510px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 47px;
+}
+
+.header__column {
+  max-width: 550px;
+}
+
+.header__title {
+  max-width: 370px;
+  margin-bottom: 70px;
+}
+
+.header__subtitle {
+  font-family: "Inter";
+  font-size: 22px;
+  line-height: 122.72727%;
+  color: #202336;
+  font-weight: 600;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.header__subtitle::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 34px;
+  background-color: #202336;
+  bottom: -15px;
+}
+
+.header__button {
+  color: #ffffff;
+  background-color: #fb8f1d;
+}
+
+.title {
+  font-family: "Playfair Display";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 125%;
+  color: #202336;
+}
+
+.form {
+  background: none;
+  padding: 0px 0px 0px 31px;
+  border: 0.8px solid #afb0b9;
+  height: 52px;
+  border-radius: 6px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 220px;
+  color: #4a4c53;
+  font-size: 15px;
+  line-height: 213.33333%;
+  font-family: "Inter";
+}
+
+.select {
+  position: relative;
+  margin-bottom: 35px;
+  margin-right: 30px;
+}
+
+.select::after,
+.select::before {
+  content: "";
+  width: 8px;
+  height: 1.4px;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  right: 13.7%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.select::after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.select::before {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: 85.5%;
+}
+
+.select select:focus {
+  outline: 0;
+  border-color: #fb8f1d;
+}
+
+.select1,
+.select2 {
+  margin-bottom: 0;
+}
+
 /* @import "popup.scss"; */
 
 /* @import "footer.scss"; */
+
+@media (min-width: 991.98px) {
+  .header__button:hover {
+    background-color: transparent;
+    color: #fb8f1d;
+  }
+}
 
 @media (min-width: 992px) {
   .btn:hover {
