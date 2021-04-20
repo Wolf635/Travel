@@ -11,76 +11,9 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
-      <div class="container">
-        <div class="header__wrapper">
-          <a class="header__logo" href="#"><img src="img/header/logo.svg" alt="Картинка"></a>
-          <div class="header__menu menu">
-            <div class="menu__icon icon__menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <nav class="menu__body">
-              <!-- Меню лучше делать именно таким образом  -->
-              <ul class="menu__list">
-                <li class="menu__item"><a class="menu__link" href="#"><span>Home</span></a></li>
-                <li class="menu__item"><a class="menu__link" href="#"><span>Destinations</span></a></li>
-                <li class="menu__item"><a class="menu__link" href="#"><span>About</span></a></li>
-                <li class="menu__item"><a class="menu__link" href="#"><span>Partner</span></a></li>
-              </ul>
-            </nav>
-            <a class="button__login btn" href="#">Login</a>
-            <a class="button__register btn" href="#">Register</a>
-          </div>
-        </div>
-        <div class="header__row">
-          <div class="header__column">
-            <div class="header__title title">Explore and Travel</div>
-            <div class="header__subtitle">Holiday finder</div>
-            <div class="header__form">
-              <div class="select">
-                <select class="form">
-                  <option value="0">Location</option>
-                  <option value="1">location2</option>
-                  <option value="2">location3</option>
-                  <option value="3">location4</option>
-                </select>
-              </div>
-              <div class="select">
-                <select class="form">
-                  <option value="0">Activity</option>
-                  <option value="1">location2</option>
-                  <option value="2">location3</option>
-                  <option value="3">location4</option>
-                </select>
-              </div>
-              <div class="select select1">
-                <select class="form">
-                  <option value="0">Grade</option>
-                  <option value="1">location2</option>
-                  <option value="2">location3</option>
-                  <option value="3">location4</option>
-                </select>
-              </div>
-              <div class="select select2">
-                <select class="form">
-                  <option value="0">Date</option>
-                  <option value="1">location2</option>
-                  <option value="2">location3</option>
-                  <option value="3">location4</option>
-                </select>
-              </div>
-            </div>
-            <a class="header__button btn" href="#">Explore</a>
-          </div>
-          <div class="header__image ibg">
-            <img src="img/header/04.jpg" alt="Картинка хедера">
-          </div>
-        </div>
+    @@include('_header.html', {})
+    @@include('_hero.html', {})
 
-      </div>
-    </header>
   </div>
 </body>
 
