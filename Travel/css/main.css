@@ -195,6 +195,13 @@ body {
   margin-right: 85px;
 }
 
+.header__nav-right.active {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .header__menu {
   margin-right: 30px;
 }
@@ -602,6 +609,7 @@ body {
 
   .header__menu {
     position: fixed;
+    top: -100px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -610,7 +618,7 @@ body {
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     background-color: #09916f;
-    padding: 70px 10px 20px 10px;
+    padding: 170px 10px 20px 10px;
   }
 
   .header__menu.active {
