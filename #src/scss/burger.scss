@@ -1,0 +1,94 @@
+@import "variables";
+
+@media (max-width: $md3+px) {
+  body.lock {
+    overflow: hidden;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #09916f;
+    z-index: 50;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(204, 167, 64);
+      z-index: 2;
+    }
+    &__body {
+      height: 50px;
+      padding-top: 0;
+    }
+    &__burger {
+      display: block;
+      width: 30px;
+      height: 20px;
+      position: relative;
+      z-index: 3;
+      span {
+        position: absolute;
+        background-color: $color1;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 9px;
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $color1;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+      }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+      &.active span {
+        transform: scale(0);
+      }
+      &.active::before {
+        transform: rotate(45deg);
+        top: 9px;
+        transition: all 0.3s ease 0s;
+      }
+      &.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+      }
+    }
+    &__menu {
+      position: fixed;
+      top: -100px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      transition: all 0.3s ease 0s;
+      background-color: #09916f;
+      padding: 70px 10px 20px 10px;
+      &.active {
+        top: 0;
+      }
+    }
+  }
+  .menu {
+    &__list {
+      display: block;
+      &-item {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

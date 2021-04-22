@@ -78,7 +78,7 @@ body {
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 @import "forms.scss";
-/* @import "burger.scss"; */
+@import "burger.scss";
 /* @import "mixins.scss"; */
 /* @import "ui.scss"; */
 @import "image.scss";
