@@ -10,6 +10,7 @@
     left: 0;
     width: 100%;
     background-color: #09916f;
+    z-index: 2;
     &::before {
       content: "";
       position: absolute;
