@@ -66,6 +66,8 @@
       position: relative;
       @media (max-width: $md3+px) {
         font-size: 20px;
+        display: inline-block;
+        outline: transparent;
       }
       &:hover {
         color: #000;
@@ -106,12 +108,20 @@
 .btn {
   &__login {
     margin-right: 18px;
+    &:hover {
+      background-color: transparent;
+      color: $yellow;
+    }
     @media (max-width: $md2+px) {
       padding: 0px 34px;
     }
   }
   &__register {
     padding: 0px 36px;
+    &:hover {
+      background-color: transparent;
+      color: $yellow;
+    }
     @media (max-width: $md2+px) {
       padding: 0px 24px;
     }
@@ -121,7 +131,10 @@
 /* Блок hero  */
 
 .hero {
-  padding-bottom: 80px;
+  padding-bottom: 270px;
+  @media (max-width: $md3+px) {
+    padding-bottom: 90px;
+  }
   &__body {
     display: flex;
     justify-content: space-between;
@@ -289,6 +302,75 @@
         background-color: transparent;
         color: $yellow;
       }
+    }
+  }
+}
+
+/* World */
+.row {
+  display: flex;
+  @media (max-width: $md3+px) {
+    flex-direction: column-reverse;
+  }
+}
+.col {
+  &-60 {
+    &-world {
+      margin-right: 102px;
+    }
+  }
+  &__title {
+    font-family: "Playfair Display";
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 50px;
+    &-world {
+      max-width: 481px;
+      margin-bottom: 20px;
+    }
+  }
+  &__subtitle {
+    font-family: "Mulish";
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 30px / 17px * 100%;
+    color: $color2;
+    &-world {
+      max-width: 450px;
+      margin-bottom: 33px;
+    }
+  }
+}
+.world {
+  margin-bottom: 262px;
+  &__btn {
+    height: 48px;
+    border-radius: 8px;
+    padding: 0px 36px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: $yellow;
+    &:hover {
+      background-color: transparent;
+      color: $yellow;
+    }
+  }
+}
+.col-60 {
+  &-world {
+    max-width: 659px;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    @media (max-width: 830px) {
+      margin-right: 22px;
+    }
+    @media (max-width: $md3+px) {
+      margin-right: 0px;
+      padding-top: 27px;
+      margin: 0 auto;
     }
   }
 }
