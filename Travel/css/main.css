@@ -461,6 +461,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .col-60-world {
@@ -488,7 +491,7 @@ body {
 }
 
 .col__subtitle-world {
-  max-width: 450px;
+  max-width: 444px;
   margin-bottom: 33px;
 }
 
@@ -518,6 +521,100 @@ body {
 .col-60-world img {
   max-width: 100%;
   height: auto;
+}
+
+/* Section destinations */
+
+.container-body {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0px 20px;
+  width: 100%;
+}
+
+.destinations {
+  margin-bottom: 232px;
+}
+
+.destinations__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+.view-all {
+  font-weight: 600;
+  color: #fb8f1d;
+  position: relative;
+  padding-right: 15px;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+.view-all::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background-color: #fb8f1d;
+  right: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: 10px;
+}
+
+.view-all::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background-color: #fb8f1d;
+  right: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 4.2px;
+}
+
+.row__item {
+  position: relative;
+  height: 332px;
+}
+
+.row__item-text::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 60px;
+  background-color: #fff;
+  left: 0;
+  bottom: -7px;
+  z-index: 2;
+  left: -7px;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.row__item-title {
+  position: relative;
+  z-index: 3;
+  top: -40.9px;
+}
+
+.row__item-subtitle {
+  position: relative;
+  z-index: 3;
+  top: -32.3px;
 }
 
 /* @import "popup.scss"; */
