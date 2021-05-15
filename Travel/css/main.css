@@ -126,7 +126,6 @@ body {
 }
 
 .btn {
-  /* menu__button */
   padding: 0 46px;
   border-radius: 8px;
   font-weight: 500;
@@ -289,8 +288,6 @@ body {
   background-color: transparent;
   color: #fb8f1d;
 }
-
-/* Блок hero  */
 
 .hero {
   padding-bottom: 270px;
@@ -455,8 +452,6 @@ body {
   color: #fff;
 }
 
-/* World */
-
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -468,6 +463,22 @@ body {
 
 .col-60-world {
   margin-right: 102px;
+}
+
+.col-60-guides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  max-width: 599px;
+  height: auto;
+}
+
+.col-60-guides-img {
+  max-width: 100%;
+  height: auto;
 }
 
 .col__title {
@@ -482,9 +493,12 @@ body {
   margin-bottom: 20px;
 }
 
+.col__title-guides {
+  line-height: 138.88889%;
+}
+
 .col__subtitle {
   font-family: "Mulish";
-  font-size: 17px;
   font-weight: 300;
   line-height: 176.47059%;
   color: #7d7987;
@@ -493,6 +507,29 @@ body {
 .col__subtitle-world {
   max-width: 444px;
   margin-bottom: 33px;
+  line-height: 150%;
+}
+
+.col__subtitle-testimonials {
+  max-width: 450px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 150%;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.col__text {
+  max-width: 450px;
+}
+
+.col-40 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .world {
@@ -522,8 +559,6 @@ body {
   max-width: 100%;
   height: auto;
 }
-
-/* Section destinations */
 
 .container-body {
   max-width: 1185px;
@@ -639,6 +674,86 @@ body {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+/* Рейтинг звездный без JS */
+
+.simple-rating {
+  position: relative;
+  font-size: 25px;
+  display: inline-block;
+}
+
+.simple-rating::before {
+  content: "★★★★★";
+  display: block;
+}
+
+.simple-rating__items {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  overflow: hidden;
+}
+
+.simple-rating__item {
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.simple-rating__label {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  height: 100%;
+  cursor: pointer;
+  color: #ffbb0c;
+}
+
+.simple-rating__label::before {
+  content: "★";
+  display: block;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.simple-rating__item:checked,
+.simple-rating__item:checked ~ .simple-rating__label {
+  color: #fb8f1d;
+}
+
+.simple-rating__label:hover,
+.simple-rating__label:hover ~ .simple-rating__label,
+.simple-rating__label:checked ~ .simple-rating__label:hover {
+  color: #9b6b33;
+}
+
+.testimonials__name {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 218.18182%;
+}
+
+.testimonials__descriptions {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 266.66667%;
+  color: rgba(0, 0, 0, 0.85);
 }
 
 /* @import "popup.scss"; */
@@ -896,14 +1011,26 @@ body {
             flex-direction: column-reverse;
   }
 
+  .col-60-guides {
+    margin: 0 auto;
+  }
+
   .col__title {
     margin-right: 20px;
+  }
+
+  .world {
+    margin-bottom: 100px;
   }
 
   .col-60-world {
     margin-right: 0px;
     padding-top: 27px;
     margin: 0 auto;
+  }
+
+  .destinations {
+    margin-bottom: 100px;
   }
 
   .row-25 {
@@ -916,6 +1043,20 @@ body {
             justify-content: space-evenly;
     -ms-flex-direction: inherit;
         flex-direction: inherit;
+  }
+
+  .row__guides {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .guides {
+    margin-bottom: 100px;
   }
 }
 
@@ -933,6 +1074,12 @@ body {
 
   .view__link {
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 479px) {
+  .hero__column-right {
+    margin: 0 auto;
   }
 }
 
