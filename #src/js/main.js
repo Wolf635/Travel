@@ -4,3 +4,13 @@ $(document).ready(function () {
     $('body').toggleClass('lock');
   });
 });
+$(document).ready(function () {
+  $('.slider').slick({
+    /*  здесь пишем уже параметры слайдера */
+    adaptiveHeight: true,
+    slidesToShow: 1,
+    draggable: true,
+    // centerMode: true,
+    variableWidth: true,
+  });
+});

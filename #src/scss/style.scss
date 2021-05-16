@@ -348,6 +348,9 @@
     &-guides {
       line-height: 50px / 36px * 100%;
     }
+    &--testimonials {
+      margin-bottom: 145px;
+    }
   }
   &__subtitle {
     font-family: "Mulish";
@@ -365,7 +368,7 @@
       font-weight: 400;
       line-height: 36px / 24px * 100%;
       color: #000000;
-      margin-bottom: 40px;
+      margin: 30px 0px 40px 0px;
     }
   }
   &__text {
@@ -525,9 +528,13 @@
       flex-direction: column;
     }
   }
+  &__testimonials {
+    align-items: center;
+  }
 }
 //  section guides
 .guides {
+  margin-bottom: 248px;
   @media (max-width: $md3+px) {
     margin-bottom: 100px;
   }
@@ -587,6 +594,7 @@
   color: #9b6b33;
 }
 .testimonials {
+  margin-bottom: 270px;
   &__name {
     font-size: 22px;
     font-weight: 700;
@@ -598,4 +606,58 @@
     line-height: 48px / 18px * 100%;
     color: rgba(0, 0, 0, 0.85);
   }
+}
+
+/*  Слайдер  */
+
+.slider__item-image {
+  max-width: 384px;
+  max-height: 491px;
+  border-radius: 15px;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+/*  Конкретный слайдер мой */
+.slider {
+  position: relative;
+  display: flex;
+  max-width: 384px;
+  overflow: hidden;
+  &__item {
+    position: relative;
+    &-text {
+      content: "";
+      position: absolute;
+      background-color: #fff;
+      bottom: 0;
+      border-top-left-radius: 10px;
+      padding-right: 130px;
+      padding-top: 61px;
+      right: 0;
+    }
+  }
+}
+.slider .slick-arrow {
+  position: absolute;
+  bottom: 0;
+  margin: -30px 0px 0px 0px;
+  z-index: 10;
+  font-size: 0;
+  width: 40px; /* длина кнопок слайдера*/
+  height: 40px; /*  высота кнопок слайдера*/
+}
+.slider .slick-arrow.slick-prev {
+  right: 62.6px;
+  background: url("../img/rt/prev.png") 0 0 / 100% no-repeat;
+}
+.slider .slick-arrow.slick-next {
+  right: 0;
+  background: url("../img/rt/next.png") 0 0 / 100% no-repeat;
 }
