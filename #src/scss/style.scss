@@ -315,7 +315,7 @@
   }
 }
 .col {
-  &-60 {
+  &-61 {
     &-world {
       margin-right: 102px;
     }
@@ -530,6 +530,7 @@
   }
   &__testimonials {
     align-items: center;
+    min-width: 0;
   }
 }
 //  section guides
@@ -623,12 +624,15 @@
 /* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
+  border: 1px solid rgb(152, 165, 35);
 }
 /*  Конкретный слайдер мой */
 .slider {
-  position: relative;
+  border: 1px solid red;
+  min-width: 0;
+  width: 100%;
   display: flex;
-  max-width: 384px;
+  justify-content: space-between;
   overflow: hidden;
   &__item {
     position: relative;

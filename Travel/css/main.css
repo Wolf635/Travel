@@ -104,6 +104,7 @@ body {
 
 .wrapper {
   /* width: 100%; */
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -461,11 +462,11 @@ body {
           justify-content: space-between;
 }
 
-.col-60-world {
+.col-61-world {
   margin-right: 102px;
 }
 
-.col-60-guides {
+.col-61-guides {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,7 +477,7 @@ body {
   height: auto;
 }
 
-.col-60-guides-img {
+.col-61-guides-img {
   max-width: 100%;
   height: auto;
 }
@@ -684,6 +685,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-width: 0;
 }
 
 .guides {
@@ -797,16 +799,21 @@ body {
 
 .slick-list {
   overflow: hidden;
+  border: 1px solid #98a523;
 }
 
 /*  Конкретный слайдер мой */
 
 .slider {
-  position: relative;
+  border: 1px solid red;
+  min-width: 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 384px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   overflow: hidden;
 }
 
@@ -1102,7 +1109,7 @@ body {
             flex-direction: column-reverse;
   }
 
-  .col-60-guides {
+  .col-61-guides {
     margin: 0 auto;
   }
 

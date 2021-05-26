@@ -1,3 +1,7 @@
+// @@include('slick.min.js');
+
+
+
 $(document).ready(function () {
   $('.header__burger').click(function (event) {
     $('.header__burger, .header__menu').toggleClass('active');
@@ -6,11 +10,17 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
   $('.slider').slick({
-    /*  здесь пишем уже параметры слайдера */
-    adaptiveHeight: true,
+    infinite: true,
+    adaptiveHeight: false,
     slidesToShow: 1,
     draggable: true,
+    waitForAnimate: true,
+    // touchThreshold: 10,
     // centerMode: true,
-    variableWidth: true,
+    // variableWidth: true,
+    // slidesPerRow: 2,
+    // slidesToScroll: 1,
+    // autoplay: true,
+    // autoplaySpeed: 9000,
   });
 });
